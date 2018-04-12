@@ -20,7 +20,7 @@ def coin_market_update
     @array_of_price <<  currency_price.text #on stock chaque prix de crypto dans une array contenant des prix
   end
 
-  for i in 0 .. @compteur-1 do #on initialise une boucle qui va etre executé le nombre de fois qu'il y a de cryptomonnaies
+  for i in 0 .. @compteur-1 do #on initialise une boucle qui va etre executée le nombre de fois qu'il y a de cryptomonnaies
     @result[@array_of_name[i]]=@array_of_price[i] #on entre dans le hash final chaque nom avec son prix
   end
 
@@ -42,7 +42,7 @@ def demarrage
       @result = {} #initialisation du hash final
       coin_market_update
       puts "les cryptomonnaies ont été affichées. Prochaine actualisation dans une heure"
-      sleep(3600)
+      sleep(3600) #Donnée en seconde, soit 1h
     end
   end
 end
